@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Affairs Planning Calendar</title>
+  <meta name="description" content="A unified reference view of the official academic calendar and the Academic Affairs scheduling cycle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#view-root">Skip to content</a>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>AA Planning Calendar<br><small>Academic Affairs · Antelope Valley College</small></span>
+    </div>
+    <div class="year-select-wrap">
+      <label for="year-select">Academic year</label>
+      <select id="year-select" aria-label="Select academic year"></select>
+    </div>
+    <button class="filters-toggle" id="filters-toggle" aria-expanded="true" aria-controls="filters-panel">
+      Filters <span class="count" id="filters-count" hidden></span>
+    </button>
+  </header>
+
+  <nav class="app-nav" role="tablist" aria-label="Calendar views" id="view-tabs">
+    <button class="nav-tab" role="tab" id="tab-today" data-view="today" aria-selected="true">Today</button>
+    <button class="nav-tab" role="tab" id="tab-week" data-view="week" aria-selected="false">Week</button>
+    <button class="nav-tab" role="tab" id="tab-month" data-view="month" aria-selected="false">Month</button>
+    <button class="nav-tab" role="tab" id="tab-year" data-view="year" aria-selected="false">Year</button>
+    <button class="nav-tab" role="tab" id="tab-cycle" data-view="cycle" aria-selected="false">Scheduling Cycle</button>
+  </nav>
+
+  <div class="app-body">
+    <aside class="filters-panel" id="filters-panel" aria-label="Filters">
+      <h2>Filters</h2>
+
+      <div class="filter-group">
+        <h3 id="owner-filter-label">Owner</h3>
+        <div id="owner-filters" role="group" aria-labelledby="owner-filter-label"></div>
+      </div>
+
+      <div class="filter-group">
+        <h3 id="category-filter-label">Category</h3>
+        <div id="category-filters" role="group" aria-labelledby="category-filter-label"></div>
+      </div>
+
+      <div class="filter-group">
+        <h3 id="term-filter-label">Term</h3>
+        <div id="term-filters" role="group" aria-labelledby="term-filter-label"></div>
+      </div>
+
+      <button class="filters-reset" id="filters-reset" type="button">Show everything</button>
+    </aside>
+
+    <main id="view-root" tabindex="-1" aria-live="polite">
+      <div class="loading-state">Loading calendar data…</div>
+    </main>
+  </div>
+
+  <footer class="app-footer">
+    <p>Informational reference only — not a task tracker. Source data lives in <code>data/</code> and is maintained directly by Academic Affairs.
+    Official calendar dates come from the Board of Trustees–approved AVC academic calendars; scheduling milestones come from the Academic Affairs scheduling-cycle worksheet.</p>
+  </footer>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="modal">
+      <div class="modal-head">
+        <h2 id="modal-title">Event</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close event details">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/calendar.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
