@@ -55,26 +55,6 @@
       "notes": null
     },
     {
-      "id": "fall-w04-over-50-online",
-      "scheduleTerm": "fall",
-      "week": 4,
-      "timing": "unspecified",
-      "title": "Over 50% online",
-      "owner": "academic-affairs",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
-      "category": "scheduling",
-      "cycle": "scheduling-cycle",
-      "relatedTerms": [
-        "intersession",
-        "spring"
-      ],
-      "description": null,
-      "notes": null
-    },
-    {
       "id": "fall-w04-over-67-adjunct",
       "scheduleTerm": "fall",
       "week": 4,
@@ -483,26 +463,6 @@
       "week": 4,
       "timing": "unspecified",
       "title": "Over/under load",
-      "owner": "academic-affairs",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
-      "category": "scheduling",
-      "cycle": "scheduling-cycle",
-      "relatedTerms": [
-        "summer",
-        "fall"
-      ],
-      "description": null,
-      "notes": null
-    },
-    {
-      "id": "spring-w04-over-50-online",
-      "scheduleTerm": "spring",
-      "week": 4,
-      "timing": "unspecified",
-      "title": "Over 50% online",
       "owner": "academic-affairs",
       "audience": [
         "academic-affairs",
