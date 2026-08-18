@@ -1,0 +1,512 @@
+{
+  "schemaVersion": "1.0",
+  "academicYear": "2026-27",
+  "source": {
+    "document": "AVC 26-27 calendar BOT approved 10-14-25",
+    "url": "https://www.avc.edu/sites/default/files/AVC%2026-27%20calendar%20BOT%20approved%2010-14-25.pdf",
+    "boardApprovalDate": "2025-10-14",
+    "notes": "Document is labeled DRAFT in its content despite the Board of Trustees approval date. Treated as authoritative for this application until superseded."
+  },
+  "terms": [
+    {
+      "id": "fall",
+      "name": "Fall 2026",
+      "start": "2026-08-17",
+      "end": "2026-12-05"
+    },
+    {
+      "id": "intersession",
+      "name": "Intersession 2026–27",
+      "start": "2027-01-04",
+      "end": "2027-02-06"
+    },
+    {
+      "id": "spring",
+      "name": "Spring 2027",
+      "start": "2027-02-08",
+      "end": "2027-06-05"
+    },
+    {
+      "id": "summer",
+      "name": "Summer 2027",
+      "start": "2027-06-14",
+      "end": "2027-08-07"
+    }
+  ],
+  "calendarEvents": [
+    {
+      "id": "fall2026-start",
+      "title": "Fall Semester Start",
+      "start": "2026-08-17",
+      "end": "2026-08-17",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "fall2026-census",
+      "title": "Fall Census Day",
+      "start": "2026-08-31",
+      "end": "2026-08-31",
+      "owner": "academic-calendar",
+      "category": "registration",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "labor-day-2026",
+      "title": "Labor Day",
+      "start": "2026-09-07",
+      "end": "2026-09-07",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "voter-reg-day-2026",
+      "title": "National Voter Registration Day",
+      "start": "2026-09-15",
+      "end": "2026-09-15",
+      "owner": "academic-calendar",
+      "category": "other",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "indigenous-peoples-day-2026",
+      "title": "Indigenous Peoples Day",
+      "start": "2026-10-12",
+      "end": "2026-10-12",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "voter-reg-deadline-2026",
+      "title": "Voter Registration Deadline",
+      "start": "2026-10-18",
+      "end": "2026-10-18",
+      "owner": "academic-calendar",
+      "category": "other",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "early-voting-2026",
+      "title": "Early Voting Begins",
+      "start": "2026-10-23",
+      "end": "2026-10-23",
+      "owner": "academic-calendar",
+      "category": "other",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "election-day-2026",
+      "title": "Election Day",
+      "start": "2026-11-03",
+      "end": "2026-11-03",
+      "owner": "academic-calendar",
+      "category": "other",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "veterans-day-2026",
+      "title": "Veterans Day",
+      "start": "2026-11-11",
+      "end": "2026-11-11",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "thanksgiving-2026",
+      "title": "Thanksgiving Day",
+      "start": "2026-11-26",
+      "end": "2026-11-26",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "local-holiday-nov-2026",
+      "title": "Local Holiday",
+      "start": "2026-11-27",
+      "end": "2026-11-28",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "fall2026-end",
+      "title": "Fall Semester End",
+      "start": "2026-12-05",
+      "end": "2026-12-05",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "christmas-2026",
+      "title": "Christmas",
+      "start": "2026-12-24",
+      "end": "2026-12-25",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "local-holiday-dec-2026",
+      "title": "Local Holiday",
+      "start": "2026-12-26",
+      "end": "2026-12-31",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "new-years-2027",
+      "title": "New Year's Day",
+      "start": "2027-01-01",
+      "end": "2027-01-01",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "intersession2627-start",
+      "title": "Intersession Term Start",
+      "start": "2027-01-04",
+      "end": "2027-01-04",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "mlk-day-2027",
+      "title": "Martin Luther King Jr. Day",
+      "start": "2027-01-18",
+      "end": "2027-01-18",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "intersession2627-end",
+      "title": "Intersession Term End",
+      "start": "2027-02-06",
+      "end": "2027-02-06",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "spring2027-start",
+      "title": "Spring Semester Start",
+      "start": "2027-02-08",
+      "end": "2027-02-08",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "lincolns-day-2027",
+      "title": "Lincoln's Day",
+      "start": "2027-02-12",
+      "end": "2027-02-12",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "local-holiday-feb-2027",
+      "title": "Local Holiday",
+      "start": "2027-02-13",
+      "end": "2027-02-13",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "washingtons-day-2027",
+      "title": "Washington's Day",
+      "start": "2027-02-15",
+      "end": "2027-02-15",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "spring2027-census",
+      "title": "Spring Census Day",
+      "start": "2027-02-22",
+      "end": "2027-02-22",
+      "owner": "academic-calendar",
+      "category": "registration",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "farmworkers-day-2027",
+      "title": "Farmworkers Day",
+      "start": "2027-03-31",
+      "end": "2027-03-31",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "spring-break-2027",
+      "title": "Spring Break",
+      "start": "2027-04-05",
+      "end": "2027-04-10",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "memorial-day-2027",
+      "title": "Memorial Day",
+      "start": "2027-05-31",
+      "end": "2027-05-31",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "commencement-2027",
+      "title": "Commencement Ceremony",
+      "start": "2027-06-04",
+      "end": "2027-06-04",
+      "owner": "academic-calendar",
+      "category": "other",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "spring2027-end",
+      "title": "Spring Semester End",
+      "start": "2027-06-05",
+      "end": "2027-06-05",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "summer2027-start",
+      "title": "Summer Term Start",
+      "start": "2027-06-14",
+      "end": "2027-06-14",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "juneteenth-observed-2027",
+      "title": "Juneteenth Observed",
+      "start": "2027-06-18",
+      "end": "2027-06-18",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "juneteenth-2027",
+      "title": "Juneteenth",
+      "start": "2027-06-19",
+      "end": "2027-06-19",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true
+    },
+    {
+      "id": "independence-day-2027",
+      "title": "Independence Day",
+      "start": "2027-07-05",
+      "end": "2027-07-05",
+      "owner": "academic-calendar",
+      "category": "holiday",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": true,
+      "notes": "Observed date per official calendar."
+    },
+    {
+      "id": "summer2027-end",
+      "title": "Summer Term End",
+      "start": "2027-08-07",
+      "end": "2027-08-07",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    }
+  ]
+}
