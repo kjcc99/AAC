@@ -61,10 +61,11 @@ Edit `data/scheduling-cycles/2026-27.json` directly (the filename reflects when 
 
 ## Year switching and navigation bounds
 
-- Selecting a different academic year jumps the Week/Month view to July of that year, rather than leaving you looking at a month that belongs to a different year's calendar.
+- **Every fresh visit (including a plain reload) always resolves to the academic year containing today, and anchors Week/Month on today.** The selected academic year is intentionally *not* persisted across visits — only view/filter preferences are — so a person can never land back on a stale year (or the "jump to July" starting point) left over from a previous session. Mid-session, switching years is still fully supported and remembered for the rest of that session; it just doesn't leak into the next visit.
+- Selecting a different academic year mid-session jumps the Week/Month view to July of that year, rather than leaving you looking at a month that belongs to a different year's calendar.
 - Week/Month "Previous"/"Next" navigation is clamped to the selected academic year (July through June) — the buttons disable at the edges instead of wandering into a year with no data loaded.
 - If today's date falls outside the selected academic year, the Today view says so plainly and offers a one-click switch to whichever loaded year does contain today, rather than silently showing an empty, confusing screen.
-- The year dropdown only ever lists years we have real calendar data for (see "Updating the data each year" below to add one). We deliberately don't auto-switch it on load beyond picking the year containing today, or preload every year in the background — with just a couple of years of data this keeps the behavior predictable; revisit this if the list of years grows.
+- The year dropdown only ever lists years we have real calendar data for (see "Updating the data each year" below to add one). We deliberately don't auto-switch it mid-session beyond the initial today-based resolution, or preload every year in the background — with just a couple of years of data this keeps the behavior predictable; revisit this if the list of years grows.
 
 ## Known open decisions
 
