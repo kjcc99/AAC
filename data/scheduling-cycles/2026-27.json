@@ -1,0 +1,904 @@
+{
+  "schemaVersion": "1.1",
+  "source": {
+    "file": "AA scheduling cycle.xlsx",
+    "sheet": "DRAFT Schedule Cycle (AY 2425 -> renamed 26/27)",
+    "status": "canonical-reusable",
+    "notes": "Originally drafted against the AY24-25 tab; the sheet was relabeled 26-27 because the underlying week-relative structure is unchanged. These relative rules apply to any academic year with an official calendar loaded, not only 2026-27."
+  },
+  "cycles": [
+    {
+      "id": "scheduling-cycle",
+      "name": "Term Scheduling Cycle",
+      "description": "The recurring, rolling process of building, staffing, and publishing each term's course schedule roughly three terms ahead of its start."
+    }
+  ],
+  "events": [
+    {
+      "id": "fall-w04-individual-instructor-intersession-spring-loads-sent-to",
+      "scheduleTerm": "fall",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Individual instructor intersession/spring loads sent to divisions",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w04-over-under-load",
+      "scheduleTerm": "fall",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Over/under load",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w04-over-50-online",
+      "scheduleTerm": "fall",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Over 50% online",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w04-over-67-adjunct",
+      "scheduleTerm": "fall",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Over 67% adjunct",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w04-staff-sections",
+      "scheduleTerm": "fall",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "STAFF sections",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w04-de-certification",
+      "scheduleTerm": "fall",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "DE certification",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w06-intersession-spring-final-changes-due",
+      "scheduleTerm": "fall",
+      "week": 6,
+      "timing": "start",
+      "title": "Intersession/spring final changes due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w06-all-section-staffing-due",
+      "scheduleTerm": "fall",
+      "week": 6,
+      "timing": "start",
+      "title": "All section staffing due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w07-aa-entering-final-intersession-spring-changes",
+      "scheduleTerm": "fall",
+      "week": 7,
+      "timing": "unspecified",
+      "title": "AA entering final intersession/spring changes",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w07-divisions-send-intersession-spring-schedules-to-faculty",
+      "scheduleTerm": "fall",
+      "week": 7,
+      "timing": "unspecified",
+      "title": "Divisions send intersession/spring schedules to faculty before launch",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w08-web-schedule-launch-intersession-spring",
+      "scheduleTerm": "fall",
+      "week": 8,
+      "timing": "unspecified",
+      "title": "Web schedule launch intersession/spring",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w09-summer-fall-schedule-call-rollover",
+      "scheduleTerm": "fall",
+      "week": 9,
+      "timing": "unspecified",
+      "title": "Summer/fall schedule call (rollover)",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w10-divisions-send-summer-fall-rollover-schedules-to-facult",
+      "scheduleTerm": "fall",
+      "week": 10,
+      "timing": "unspecified",
+      "title": "Divisions send summer/fall rollover schedules to faculty",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w11-summer-fall-preference-sheets-out",
+      "scheduleTerm": "fall",
+      "week": 11,
+      "timing": "unspecified",
+      "title": "Summer/fall preference sheets out",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w12-summer-fall-preference-sheets-due",
+      "scheduleTerm": "fall",
+      "week": 12,
+      "timing": "end",
+      "title": "Summer/fall preference sheets due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w13-priority-registration-intersession-spring",
+      "scheduleTerm": "fall",
+      "week": 13,
+      "timing": "unspecified",
+      "title": "Priority registration — intersession/spring",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w15-summer-fall-schedule-due",
+      "scheduleTerm": "fall",
+      "week": 15,
+      "timing": "end",
+      "title": "Summer/fall schedule due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w15-open-registration-intersession-spring",
+      "scheduleTerm": "fall",
+      "week": 15,
+      "timing": "unspecified",
+      "title": "Open registration — intersession/spring",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "fall-w16-aa-build-summer-fall",
+      "scheduleTerm": "fall",
+      "week": 16,
+      "timing": "unspecified",
+      "title": "AA build summer/fall",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "intersession-w01-aa-build-summer-fall",
+      "scheduleTerm": "intersession",
+      "week": 1,
+      "timing": "unspecified",
+      "title": "AA build summer/fall",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "intersession-w04-aa-build-summer-fall",
+      "scheduleTerm": "intersession",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "AA build summer/fall",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w02-summer-fall-schedules-to-divisions-for-changes",
+      "scheduleTerm": "spring",
+      "week": 2,
+      "timing": "unspecified",
+      "title": "Summer/fall schedules to divisions for changes",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w04-individual-instructor-summer-fall-loads-sent-to-divisio",
+      "scheduleTerm": "spring",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Individual instructor summer/fall loads sent to divisions",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w04-over-under-load",
+      "scheduleTerm": "spring",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Over/under load",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w04-over-50-online",
+      "scheduleTerm": "spring",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Over 50% online",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w04-over-67-adjunct",
+      "scheduleTerm": "spring",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "Over 67% adjunct",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w04-staff-sections",
+      "scheduleTerm": "spring",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "STAFF sections",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w04-de-certification",
+      "scheduleTerm": "spring",
+      "week": 4,
+      "timing": "unspecified",
+      "title": "DE certification",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w06-summer-fall-final-changes-due",
+      "scheduleTerm": "spring",
+      "week": 6,
+      "timing": "start",
+      "title": "Summer/fall final changes due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w06-all-section-staffing-due",
+      "scheduleTerm": "spring",
+      "week": 6,
+      "timing": "start",
+      "title": "All section staffing due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w07-aa-entering-final-summer-fall-changes",
+      "scheduleTerm": "spring",
+      "week": 7,
+      "timing": "unspecified",
+      "title": "AA entering final summer/fall changes",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w08-divisions-send-summer-fall-schedules-to-faculty-before-",
+      "scheduleTerm": "spring",
+      "week": 8,
+      "timing": "unspecified",
+      "title": "Divisions send summer/fall schedules to faculty before schedule web launch",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w09-web-schedule-launch-summer-fall",
+      "scheduleTerm": "spring",
+      "week": 9,
+      "timing": "unspecified",
+      "title": "Web schedule launch summer/fall",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w09-intersession-spring-schedule-call-rollover",
+      "scheduleTerm": "spring",
+      "week": 9,
+      "timing": "unspecified",
+      "title": "Intersession/spring schedule call (rollover)",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w10-divisions-send-intersession-spring-rollover-schedules-t",
+      "scheduleTerm": "spring",
+      "week": 10,
+      "timing": "unspecified",
+      "title": "Divisions send intersession/spring rollover schedules to faculty",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w11-intersession-spring-preference-sheets-out",
+      "scheduleTerm": "spring",
+      "week": 11,
+      "timing": "unspecified",
+      "title": "Intersession/spring preference sheets out",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w12-intersession-spring-preference-sheets-due",
+      "scheduleTerm": "spring",
+      "week": 12,
+      "timing": "end",
+      "title": "Intersession/spring preference sheets due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w12-open-registration-summer-fall",
+      "scheduleTerm": "spring",
+      "week": 12,
+      "timing": "unspecified",
+      "title": "Open registration — summer/fall",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w13-priority-registration-summer-fall",
+      "scheduleTerm": "spring",
+      "week": 13,
+      "timing": "unspecified",
+      "title": "Priority registration — summer/fall",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "spring-w15-open-registration-summer-fall",
+      "scheduleTerm": "spring",
+      "week": 15,
+      "timing": "unspecified",
+      "title": "Open registration — summer/fall",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "summer",
+        "fall"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "summer-w02-intersession-spring-schedule-due",
+      "scheduleTerm": "summer",
+      "week": 2,
+      "timing": "end",
+      "title": "Intersession/spring schedule due",
+      "owner": "academic-divisions",
+      "audience": [
+        "academic-divisions",
+        "academic-affairs"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "summer-w03-aa-build-intersession-spring",
+      "scheduleTerm": "summer",
+      "week": 3,
+      "timing": "unspecified",
+      "title": "AA build intersession/spring",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "summer-w06-aa-build-intersession-spring",
+      "scheduleTerm": "summer",
+      "week": 6,
+      "timing": "unspecified",
+      "title": "AA build intersession/spring",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "intersession",
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    },
+    {
+      "id": "summer-w08-spring-schedules-to-divisions-for-changes",
+      "scheduleTerm": "summer",
+      "week": 8,
+      "timing": "unspecified",
+      "title": "Spring schedules to divisions for changes",
+      "owner": "academic-affairs",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions"
+      ],
+      "category": "scheduling",
+      "cycle": "scheduling-cycle",
+      "relatedTerms": [
+        "spring"
+      ],
+      "description": null,
+      "notes": null
+    }
+  ]
+}
