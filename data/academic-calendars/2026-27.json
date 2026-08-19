@@ -35,6 +35,21 @@
   ],
   "calendarEvents": [
     {
+      "id": "fall2026-openingday",
+      "title": "Fall Semester Opening Day",
+      "start": "2026-08-14",
+      "end": "2026-08-14",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
       "id": "fall2026-start",
       "title": "Fall Semester Start",
       "start": "2026-08-17",
@@ -291,6 +306,18 @@
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
+    {
+      "id": "spring2027-openingday",
+      "title": "Spring Semester Opening Day",
+      "start": "2027-01-05",
+      "end": "2027-01-05",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
     {
       "id": "spring2027-start",
       "title": "Spring Semester Start",
