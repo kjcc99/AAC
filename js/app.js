@@ -25,7 +25,8 @@
     weekAnchor: null,  // Date, any day within the shown week
     monthAnchor: null, // Date, first-of-month
     today: AACal.stripTime(new Date()),
-    lastFocused: null
+    lastFocused: null,
+    navigating: false // guards against overlapping async year-flip loads
   };
 
   const el = {
@@ -111,8 +112,117 @@
     return { y, start: AACal.parseDate(y.start), end: AACal.parseDate(y.end) };
   }
 
-  function isSameMonth(a, b) {
-    return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth();
+  /** The actual date range covered by the currently loaded calendar file's
+   * events (earliest event start through latest event end). Used to bound
+   * Week/Month "Previous"/"Next" navigation, because a calendar file's real
+   * coverage (roughly mid-Aug \u2013 early Aug, per its own terms) doesn't line
+   * up with the generic July\u2013June window declared in academic-years.json.
+   * That declared window is left alone and still used for "which year
+   * contains today" (see getSelectedYearBounds) \u2014 this is only for nav. */
+  function getLoadedCalendarBounds() {
+    let min = null, max = null;
+    for (const e of state.events) {
+      const s = AACal.parseDate(e.start);
+      const en = AACal.parseDate(e.end || e.start);
+      if (!min || s < min) min = s;
+      if (!max || en > max) max = en;
+    }
+    if (!min || !max) {
+      const b = getSelectedYearBounds();
+      return { start: b.start, end: b.end };
+    }
+    return { start: min, end: max };
+  }
+
+  /** The academic year adjacent to the current one in the dropdown's list
+   * order (direction -1 = previous, +1 = next), or null if there isn't one
+   * \u2014 i.e. no calendar file is loaded for that direction. */
+  function getAdjacentYear(direction) {
+    const idx = state.years.findIndex((y) => y.id === state.currentYearId);
+    if (idx === -1) return null;
+    return state.years[idx + direction] || null;
+  }
+
+  /** Load a different year's calendar data mid-navigation (clicking past
+   * the edge of the currently loaded file's coverage) and land on a
+   * specific month or week, rather than resetting to the new year's start
+   * the way switchToYear (triggered by the dropdown) does. Clamps to the
+   * nearest edge of the newly loaded data if the target date somehow isn't
+   * covered by it, so navigation never lands somewhere with nothing loaded. */
+  async function switchToYearAndAnchor(yearId, targetDate, anchorKind) {
+    if (state.navigating) return;
+    state.navigating = true;
+    try {
+      state.currentYearId = yearId;
+      el.yearSelect.value = yearId;
+      persistPrefs();
+      await loadYearData(yearId);
+      const bounds = getLoadedCalendarBounds();
+      let clamped = targetDate;
+      if (clamped < bounds.start) clamped = bounds.start;
+      if (clamped > bounds.end) clamped = bounds.end;
+      if (anchorKind === 'week') {
+        state.weekAnchor = new Date(clamped);
+      } else {
+        state.monthAnchor = new Date(clamped.getFullYear(), clamped.getMonth(), 1);
+      }
+      render();
+    } finally {
+      state.navigating = false;
+    }
+  }
+
+  /** Step the Month view by one month, flipping to the adjacent year's
+   * calendar file (and updating the dropdown) if the step would move past
+   * the edge of what's currently loaded and another year's data covers it. */
+  async function stepMonth(delta) {
+    if (state.navigating) return;
+    const anchor = state.monthAnchor;
+    const target = new Date(anchor.getFullYear(), anchor.getMonth() + delta, 1);
+    const bounds = getLoadedCalendarBounds();
+    const earliestMonth = new Date(bounds.start.getFullYear(), bounds.start.getMonth(), 1);
+    const latestMonth = new Date(bounds.end.getFullYear(), bounds.end.getMonth(), 1);
+
+    if (target < earliestMonth) {
+      const prevYear = getAdjacentYear(-1);
+      if (!prevYear) return;
+      await switchToYearAndAnchor(prevYear.id, target, 'month');
+      return;
+    }
+    if (target > latestMonth) {
+      const nextYear = getAdjacentYear(1);
+      if (!nextYear) return;
+      await switchToYearAndAnchor(nextYear.id, target, 'month');
+      return;
+    }
+    state.monthAnchor = target;
+    render();
+  }
+
+  /** Step the Week view by one week (7 days), flipping to the adjacent
+   * year's calendar file the same way stepMonth does. */
+  async function stepWeek(deltaDays) {
+    if (state.navigating) return;
+    const anchor = state.weekAnchor;
+    const weekStart = AACal.addDays(anchor, -anchor.getDay());
+    const targetStart = AACal.addDays(weekStart, deltaDays);
+    const bounds = getLoadedCalendarBounds();
+
+    if (targetStart < bounds.start) {
+      const prevYear = getAdjacentYear(-1);
+      if (!prevYear) return;
+      await switchToYearAndAnchor(prevYear.id, targetStart, 'week');
+      return;
+    }
+    const targetEnd = AACal.addDays(targetStart, 6);
+    if (targetEnd > bounds.end) {
+      const nextYear = getAdjacentYear(1);
+      if (!nextYear) return;
+      await switchToYearAndAnchor(nextYear.id, targetStart, 'week');
+      return;
+    }
+    state.weekAnchor = targetStart;
+    render();
   }
 
   /** Switch academic year, reload its data, and (by default) jump the
@@ -487,9 +597,11 @@
     const days = Array.from({ length: 7 }, (_, i) => AACal.addDays(weekStart, i));
     const weekEnd = days[6];
 
+    const bounds = getLoadedCalendarBounds();
+    const disablePrev = weekStart <= bounds.start && !getAdjacentYear(-1);
+    const disableNext = weekEnd >= bounds.end && !getAdjacentYear(1);
+
     const { start: yStart, end: yEnd } = getSelectedYearBounds();
-    const disablePrev = weekStart <= yStart;
-    const disableNext = weekEnd >= yEnd;
     const todayInRange = state.today >= yStart && state.today <= yEnd;
 
     el.viewRoot.innerHTML = `
@@ -507,8 +619,8 @@
       </div>
     `;
 
-    if (!disablePrev) document.getElementById('week-prev').addEventListener('click', () => { state.weekAnchor = AACal.addDays(weekStart, -7); render(); });
-    if (!disableNext) document.getElementById('week-next').addEventListener('click', () => { state.weekAnchor = AACal.addDays(weekStart, 7); render(); });
+    if (!disablePrev) document.getElementById('week-prev').addEventListener('click', () => stepWeek(-7));
+    if (!disableNext) document.getElementById('week-next').addEventListener('click', () => stepWeek(7));
     if (todayInRange) document.getElementById('week-today').addEventListener('click', () => { state.weekAnchor = new Date(state.today); render(); });
     bindEventRowClicks(events);
   }
@@ -541,11 +653,13 @@
     const gridStart = AACal.addDays(firstOfMonth, -firstOfMonth.getDay());
     const cells = Array.from({ length: 42 }, (_, i) => AACal.addDays(gridStart, i));
 
+    const bounds = getLoadedCalendarBounds();
+    const earliestMonth = new Date(bounds.start.getFullYear(), bounds.start.getMonth(), 1);
+    const latestMonth = new Date(bounds.end.getFullYear(), bounds.end.getMonth(), 1);
+    const disablePrev = anchor.getTime() <= earliestMonth.getTime() && !getAdjacentYear(-1);
+    const disableNext = anchor.getTime() >= latestMonth.getTime() && !getAdjacentYear(1);
+
     const { start: yStart, end: yEnd } = getSelectedYearBounds();
-    const earliestMonth = new Date(yStart.getFullYear(), yStart.getMonth(), 1);
-    const latestMonth = new Date(yEnd.getFullYear(), yEnd.getMonth(), 1);
-    const disablePrev = isSameMonth(anchor, earliestMonth);
-    const disableNext = isSameMonth(anchor, latestMonth);
     const todayInRange = state.today >= yStart && state.today <= yEnd;
 
     el.viewRoot.innerHTML = `
@@ -564,8 +678,8 @@
       </div>
     `;
 
-    if (!disablePrev) document.getElementById('month-prev').addEventListener('click', () => { state.monthAnchor = new Date(y, m - 1, 1); render(); });
-    if (!disableNext) document.getElementById('month-next').addEventListener('click', () => { state.monthAnchor = new Date(y, m + 1, 1); render(); });
+    if (!disablePrev) document.getElementById('month-prev').addEventListener('click', () => stepMonth(-1));
+    if (!disableNext) document.getElementById('month-next').addEventListener('click', () => stepMonth(1));
     if (todayInRange) document.getElementById('month-today').addEventListener('click', () => { state.monthAnchor = new Date(state.today.getFullYear(), state.today.getMonth(), 1); render(); });
     bindEventRowClicks(events);
     bindMonthOverflowToggle();
@@ -634,6 +748,15 @@
     return segs;
   }
 
+  // True only for events that mark a term's literal start or end date
+  // (e.g. "Fall Semester Start"/"Fall Semester End"), determined by matching
+  // against state.calendar.terms rather than by id or category, so it stays
+  // correct even if term ids or event ids change.
+  function isTermBoundaryEvent(e) {
+    if (e.category !== 'term' || e.start !== e.end) return false;
+    return state.calendar.terms.some((t) => t.start === e.start || t.end === e.start);
+  }
+
   function renderYear(events) {
     const y = state.years.find(y => y.id === state.currentYearId);
     const yStart = AACal.parseDate(y.start), yEnd = AACal.parseDate(y.end);
@@ -643,8 +766,12 @@
     const todayInRange = AACal.dateInRange(state.today, y.start, y.end);
     const todayPct = todayInRange ? clampPct(AACal.daysBetween(yStart, state.today) / total * 100) : null;
 
-    // Ticks: every event except plain "term" boundary markers (already shown by the ribbon itself)
-    const tickEvents = events.filter(e => e.category !== 'term');
+    // Ticks: every event except the literal term start/end boundary markers
+    // (those are already represented by the ribbon segments themselves).
+    // Matched by date against state.calendar.terms rather than by category,
+    // since other single-day milestones (e.g. Fall Opening Day) also carry
+    // category "term" but aren't boundary markers and should still get a tick.
+    const tickEvents = events.filter(e => !isTermBoundaryEvent(e));
 
     el.viewRoot.innerHTML = `
       <div class="view-heading">
