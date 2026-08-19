@@ -587,6 +587,31 @@
     `;
   }
 
+  /** Jump the Week or Month view straight to today's actual date,
+   * regardless of which academic year is currently selected \u2014 loading the
+   * correct year's data first (and updating the dropdown) if needed, the
+   * same way the Month/Week click-through flip does. If no loaded year's
+   * calendar contains today at all, there's nothing to jump to; callers
+   * should disable the button in that case (see getTodayYear). */
+  async function jumpToToday(anchorKind) {
+    const todayYear = getTodayYear();
+    if (!todayYear) return;
+    if (todayYear.id === state.currentYearId) {
+      if (anchorKind === 'week') state.weekAnchor = new Date(state.today);
+      else state.monthAnchor = new Date(state.today.getFullYear(), state.today.getMonth(), 1);
+      render();
+    } else {
+      await switchToYearAndAnchor(todayYear.id, state.today, anchorKind);
+    }
+  }
+
+  /** Which loaded academic year (if any) today's date falls within, per
+   * academic-years.json's declared July\u2013June windows \u2014 used only to
+   * decide whether a Today button has anywhere to jump to. */
+  function getTodayYear() {
+    return AACal.findAcademicYear(state.years, state.today);
+  }
+
   // ------------------------------------------------------------------
   // WEEK view
   // ------------------------------------------------------------------
@@ -601,8 +626,7 @@
     const disablePrev = weekStart <= bounds.start && !getAdjacentYear(-1);
     const disableNext = weekEnd >= bounds.end && !getAdjacentYear(1);
 
-    const { start: yStart, end: yEnd } = getSelectedYearBounds();
-    const todayInRange = state.today >= yStart && state.today <= yEnd;
+    const todayYear = getTodayYear();
 
     el.viewRoot.innerHTML = `
       <div class="view-heading">
@@ -611,7 +635,7 @@
       </div>
       <div class="week-nav">
         <button class="step" id="week-prev" type="button" ${disablePrev ? 'disabled' : ''}>\u2190 Previous week</button>
-        <button class="step" id="week-today" type="button" ${todayInRange ? '' : 'disabled title="Today is outside this academic year"'}>This week</button>
+        <button class="step" id="week-today" type="button" ${todayYear ? '' : 'disabled title="No calendar data loaded for today\u2019s date"'}>Today</button>
         <button class="step" id="week-next" type="button" ${disableNext ? 'disabled' : ''}>Next week \u2192</button>
       </div>
       <div class="week-grid">
@@ -621,7 +645,7 @@
 
     if (!disablePrev) document.getElementById('week-prev').addEventListener('click', () => stepWeek(-7));
     if (!disableNext) document.getElementById('week-next').addEventListener('click', () => stepWeek(7));
-    if (todayInRange) document.getElementById('week-today').addEventListener('click', () => { state.weekAnchor = new Date(state.today); render(); });
+    if (todayYear) document.getElementById('week-today').addEventListener('click', () => jumpToToday('week'));
     bindEventRowClicks(events);
   }
 
@@ -659,8 +683,7 @@
     const disablePrev = anchor.getTime() <= earliestMonth.getTime() && !getAdjacentYear(-1);
     const disableNext = anchor.getTime() >= latestMonth.getTime() && !getAdjacentYear(1);
 
-    const { start: yStart, end: yEnd } = getSelectedYearBounds();
-    const todayInRange = state.today >= yStart && state.today <= yEnd;
+    const todayYear = getTodayYear();
 
     el.viewRoot.innerHTML = `
       <div class="view-heading">
@@ -669,7 +692,7 @@
       </div>
       <div class="month-nav">
         <button class="step" id="month-prev" type="button" ${disablePrev ? 'disabled' : ''}>\u2190 Previous month</button>
-        <button class="step" id="month-today" type="button" ${todayInRange ? '' : 'disabled title="Today is outside this academic year"'}>This month</button>
+        <button class="step" id="month-today" type="button" ${todayYear ? '' : 'disabled title="No calendar data loaded for today\u2019s date"'}>Today</button>
         <button class="step" id="month-next" type="button" ${disableNext ? 'disabled' : ''}>Next month \u2192</button>
       </div>
       <div class="month-grid">
@@ -680,7 +703,7 @@
 
     if (!disablePrev) document.getElementById('month-prev').addEventListener('click', () => stepMonth(-1));
     if (!disableNext) document.getElementById('month-next').addEventListener('click', () => stepMonth(1));
-    if (todayInRange) document.getElementById('month-today').addEventListener('click', () => { state.monthAnchor = new Date(state.today.getFullYear(), state.today.getMonth(), 1); render(); });
+    if (todayYear) document.getElementById('month-today').addEventListener('click', () => jumpToToday('month'));
     bindEventRowClicks(events);
     bindMonthOverflowToggle();
   }
