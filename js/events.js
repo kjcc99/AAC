@@ -129,7 +129,13 @@ const AAEvents = (function () {
       if (filters.terms && filters.terms.size) {
         const relevant = e.scheduleTerm ? [e.scheduleTerm, ...(e.relatedTerms || [])] : deriveCalendarTerm(e);
         const list = Array.isArray(relevant) ? relevant : [relevant];
-        if (!list.some((t) => t && filters.terms.has(t))) return false;
+        // Events with no determinable term at all (e.g. Fall Opening Day,
+        // which lands before Fall's own start date, or holidays that fall
+        // in the gap between two terms like Christmas/New Year's) aren't
+        // "about" any term, so the term filter shouldn't apply to them —
+        // only exclude events that DO have term info but none of it matches.
+        const hasTermInfo = list.some((t) => t);
+        if (hasTermInfo && !list.some((t) => t && filters.terms.has(t))) return false;
       }
       return true;
     });
