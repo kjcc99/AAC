@@ -319,6 +319,9 @@
         "academic-divisions",
         "student-services"
       ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
     {
       "id": "spring2027-start",
       "title": "Spring Semester Start",
