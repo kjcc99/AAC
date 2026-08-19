@@ -35,6 +35,21 @@
   ],
   "calendarEvents": [
     {
+      "id": "fall2027-openingday",
+      "title": "Fall Semester Opening Day",
+      "start": "2027-08-13",
+      "end": "2027-08-13",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
       "id": "fall2027-start",
       "title": "Fall Semester Start",
       "start": "2027-08-16",
@@ -295,6 +310,21 @@
       "title": "Intersession Term End",
       "start": "2028-02-05",
       "end": "2028-02-05",
+      "owner": "academic-calendar",
+      "category": "term",
+      "audience": [
+        "academic-affairs",
+        "academic-divisions",
+        "student-services"
+      ],
+      "source": "academic-calendar",
+      "businessDayBlocking": false
+    },
+    {
+      "id": "spring2028-openingday",
+      "title": "Spring Semester Opening Day",
+      "start": "2028-04-02",
+      "end": "2028-04-02",
       "owner": "academic-calendar",
       "category": "term",
       "audience": [
