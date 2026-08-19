@@ -824,7 +824,7 @@
       <div class="view-heading"><h2>All events, ${escapeHTML(y.label)}</h2></div>
       <div class="owner-column">
         <div class="owner-column-body">
-          ${events.map(e => eventRow(e, { showDate: true, showYear: true })).join('') || '<div class="owner-column-empty">No events match the current filters.</div>'}
+          ${events.map(e => eventRow(e, { showDate: true, showMonth: true })).join('') || '<div class="owner-column-empty">No events match the current filters.</div>'}
         </div>
       </div>
     `;
@@ -898,6 +898,7 @@
           <span class="event-date-col">
             <span class="dow">${DOW[d.getDay()]}</span>
             <span class="dom">${d.getDate()}</span>
+            ${opts.showMonth ? `<span class="moy">${MONTHS[d.getMonth()].slice(0, 3)}</span>` : ''}
           </span>` : ''}
         <span class="event-main">
           <span class="event-title">${holiday ? `<span class="holiday-star">${holidayIcon(12)}</span>` : ''}${escapeHTML(e.title)}</span>
