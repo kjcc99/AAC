@@ -829,13 +829,14 @@
     el.modalBody.innerHTML = `
       <dl class="detail-grid">
         <dt>Date</dt><dd>${escapeHTML(fmtRange(e.start, e.end))}</dd>
+        ${e.description ? `<dt>Description</dt><dd>${escapeHTML(e.description)}</dd>` : ''}
         <dt>Owner</dt><dd><span class="chip chip--${ownerClass(e.owner)}"><span class="owner-glyph">${ownerIcon(e.owner, 9)}</span>${escapeHTML(ownerLabel(e.owner))}</span></dd>
-        <dt>Audience</dt><dd>${escapeHTML(audienceLabelStr || ownerLabel(e.owner))}</dd>
+        <!-- <dt>Audience</dt><dd>${escapeHTML(audienceLabelStr || ownerLabel(e.owner))}</dd> -->
         <dt>Category</dt><dd>${escapeHTML(categoryLabel(e.category))}</dd>
         ${e.scheduleTerm ? `<dt>Schedule term</dt><dd>${escapeHTML(TERM_LABELS[e.scheduleTerm] || e.scheduleTerm)}</dd>` : ''}
         ${relatedTermsLabel ? `<dt>Related term(s)</dt><dd>${escapeHTML(relatedTermsLabel)}</dd>` : ''}
         ${e.scheduleTerm ? `<dt>Relative timing</dt><dd>${escapeHTML(timingLabel)}</dd>` : ''}
-        <dt>Source</dt><dd>${escapeHTML(provenance)}</dd>
+        <!-- <dt>Source</dt><dd>${escapeHTML(provenance)}</dd> -->
         ${e.notes ? `<dt>Notes</dt><dd>${escapeHTML(e.notes)}</dd>` : ''}
       </dl>
       ${navHTML}
