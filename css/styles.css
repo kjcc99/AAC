@@ -467,6 +467,7 @@ main#view-root {
 }
 .event-row .event-date-col .dow { display: block; text-transform: uppercase; }
 .event-row .event-date-col .dom { display: block; font-size: 1rem; font-weight: 700; color: var(--ink); }
+.event-row .event-date-col .moy { display: block; text-transform: uppercase; margin-top: 1px; }
 
 .event-row .event-main { flex: 1; min-width: 0; }
 .event-row .event-title { font-weight: 600; font-size: 0.92rem; color: var(--ink); margin-bottom: 3px; }
