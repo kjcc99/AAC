@@ -7,16 +7,16 @@
 
 :root {
   /* --- Base surfaces --- */
-  --bg: #FAF8FC;
+  --bg: #F8FBFC;
   --bg-raised: #FFFFFF;
-  --bg-sunken: #F1ECF7;
-  --border: #DDD4E8;
-  --border-strong: #C3B4D9;
+  --bg-sunken: #ECF3F7;
+  --border: #D4E2E8;
+  --border-strong: #B4CDD9;
 
   /* --- Ink --- */
-  --ink: #241934;
-  --ink-soft: #4B3B60;
-  --ink-faint: #756487;
+  --ink: #192B34;
+  --ink-soft: #3B5460;
+  --ink-faint: #647C87;
 
   /* --- Brand: AVC Maroon family (primary / Academic Affairs) --- */
   --maroon-900: #4A0E20;
