@@ -1,7 +1,8 @@
 /* ==========================================================================
    Academic Affairs Planning Calendar — Design Tokens
-   Palette derived from "Royal Romance" (schemecolor.com), re-tuned for
-   WCAG AA text contrast and colorblind-safe pairing with icons/shapes.
+   Palette re-tuned to the AVC Style Guide (maroon / orange / blue), with
+   shade ramps adjusted for WCAG AA text contrast and colorblind-safe
+   pairing with icons/shapes.
    ========================================================================== */
 
 :root {
@@ -17,12 +18,20 @@
   --ink-soft: #4B3B60;
   --ink-faint: #756487;
 
-  /* --- Brand: Metallic Purple family (primary / Academic Affairs) --- */
-  --purple-900: #2E0C4C;
-  --purple-700: #4D137E;
-  --purple-600: #5E1D93;
-  --purple-100: #EDE3F7;
-  --purple-050: #F5EEFB;
+  /* --- Brand: AVC Maroon family (primary / Academic Affairs) --- */
+  --maroon-900: #4A0E20;
+  --maroon-700: #6F1530;
+  --maroon-600: #8D1B3D;
+
+  /* --- Brand: AVC Blue family (light backgrounds, replaces prior lavender) --- */
+  --blue-500: #8CB9CE;
+  --blue-100: #D8EAF1;
+  --blue-050: #EFF6F9;
+
+  /* --- Brand: AVC Orange family (sparing accent — active tab, "today" marks) --- */
+  --orange-500: #F08803;
+  --orange-100: #FCE8CF;
+  --orange-900: #7A4300;
 
   /* --- Carmine family (Academic Calendar) --- */
   --carmine-800: #7A0315;
@@ -55,9 +64,9 @@
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
-  --shadow-sm: 0 1px 2px rgba(46, 12, 76, 0.08);
-  --shadow-md: 0 4px 16px rgba(46, 12, 76, 0.12);
-  --shadow-lg: 0 12px 32px rgba(46, 12, 76, 0.18);
+  --shadow-sm: 0 1px 2px rgba(74, 14, 32, 0.08);
+  --shadow-md: 0 4px 16px rgba(74, 14, 32, 0.12);
+  --shadow-lg: 0 12px 32px rgba(74, 14, 32, 0.18);
 
   --space-1: 4px;
   --space-2: 8px;
@@ -82,10 +91,10 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; margin: 0 0 var(--space-2); color: var(--purple-900); }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; margin: 0 0 var(--space-2); color: var(--maroon-900); }
 p { margin: 0 0 var(--space-3); }
 
-a { color: var(--purple-700); }
+a { color: var(--maroon-700); }
 
 button { font-family: inherit; }
 
@@ -96,7 +105,7 @@ button { font-family: inherit; }
 
 /* Visible keyboard focus everywhere */
 :focus-visible {
-  outline: 3px solid var(--purple-600);
+  outline: 3px solid var(--maroon-600);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -105,7 +114,7 @@ button { font-family: inherit; }
   position: absolute;
   left: -999px;
   top: auto;
-  background: var(--purple-900);
+  background: var(--maroon-900);
   color: #fff;
   padding: var(--space-3) var(--space-4);
   z-index: 200;
@@ -128,7 +137,7 @@ button { font-family: inherit; }
   align-items: center;
   gap: var(--space-4);
   padding: 0 var(--space-5);
-  background: var(--purple-900);
+  background: var(--maroon-900);
   color: #fff;
   box-shadow: var(--shadow-md);
 }
@@ -148,7 +157,7 @@ button { font-family: inherit; }
   width: 10px;
   height: 10px;
   border-radius: 2px;
-  background: linear-gradient(135deg, var(--gold-500), var(--carmine-600) 55%, var(--purple-600));
+  background: linear-gradient(135deg, var(--orange-500), var(--maroon-600) 55%, var(--blue-500));
   transform: rotate(45deg);
   flex: none;
 }
@@ -198,7 +207,7 @@ select#year-select option { color: var(--ink); }
   display: flex;
   gap: 2px;
   padding: var(--space-2) var(--space-5) 0;
-  background: var(--purple-050);
+  background: var(--blue-050);
   border-bottom: 1px solid var(--border);
   overflow-x: auto;
 }
@@ -214,10 +223,10 @@ select#year-select option { color: var(--ink); }
   white-space: nowrap;
   border-bottom: 3px solid transparent;
 }
-.nav-tab:hover { background: var(--purple-100); }
+.nav-tab:hover { background: var(--blue-100); }
 .nav-tab[aria-selected="true"] {
-  color: var(--purple-900);
-  border-bottom-color: var(--purple-700);
+  color: var(--maroon-900);
+  border-bottom-color: var(--orange-500);
   background: var(--bg-raised);
 }
 
@@ -259,7 +268,7 @@ select#year-select option { color: var(--ink); }
   font-weight: 600;
   cursor: pointer;
 }
-.filters-collapse-btn:hover { background: var(--purple-100); color: var(--purple-900); }
+.filters-collapse-btn:hover { background: var(--blue-100); color: var(--maroon-900); }
 
 .filters-panel h2 { font-size: 1rem; }
 
@@ -279,19 +288,19 @@ select#year-select option { color: var(--ink); }
   padding: var(--space-1) 0;
   font-size: 0.9rem;
 }
-.filter-row input { width: 16px; height: 16px; accent-color: var(--purple-700); }
+.filter-row input { width: 16px; height: 16px; accent-color: var(--maroon-700); }
 
 .filters-reset {
   background: none;
   border: 1px solid var(--border-strong);
-  color: var(--purple-700);
+  color: var(--maroon-700);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
   font-size: 0.85rem;
   cursor: pointer;
   width: 100%;
 }
-.filters-reset:hover { background: var(--purple-050); }
+.filters-reset:hover { background: var(--blue-050); }
 
 main#view-root {
   flex: 1;
@@ -334,7 +343,7 @@ main#view-root {
 }
 
 .chip--owner-academic-calendar { background: var(--carmine-050); color: var(--carmine-800); border-color: var(--carmine-100); }
-.chip--owner-academic-affairs { background: var(--purple-050); color: var(--purple-900); border-color: var(--purple-100); }
+.chip--owner-academic-affairs { background: var(--blue-050); color: var(--maroon-900); border-color: var(--blue-100); }
 .chip--owner-academic-divisions { background: var(--gold-050); color: var(--gold-900); border-color: var(--gold-100); }
 .chip--holiday { background: var(--gold-500); color: var(--gold-900); border-color: var(--gold-700); font-weight: 700; }
 
@@ -353,7 +362,7 @@ main#view-root {
    ========================================================================== */
 
 .today-hero {
-  background: linear-gradient(135deg, var(--purple-900) 0%, var(--purple-700) 100%);
+  background: linear-gradient(135deg, var(--maroon-900) 0%, var(--maroon-700) 100%);
   color: #fff;
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -397,14 +406,14 @@ main#view-root {
 }
 .ribbon-mini .seg.fall { background: rgba(159,3,24,0.55); }
 .ribbon-mini .seg.intersession { background: rgba(198,140,18,0.55); }
-.ribbon-mini .seg.spring { background: rgba(94,29,147,0.55); }
+.ribbon-mini .seg.spring { background: rgba(141,27,61,0.55); }
 .ribbon-mini .seg.summer { background: rgba(194,20,99,0.55); }
 .ribbon-mini .today-pin {
   position: absolute;
   top: -6px;
   width: 3px;
   height: 46px;
-  background: var(--gold-500);
+  background: var(--orange-500);
   border-radius: 2px;
   box-shadow: 0 0 0 2px rgba(255,255,255,0.9);
 }
@@ -431,7 +440,7 @@ main#view-root {
   border-bottom: 1px solid var(--border);
 }
 .owner-column-head.academic-calendar { background: var(--carmine-050); color: var(--carmine-800); }
-.owner-column-head.academic-affairs { background: var(--purple-050); color: var(--purple-900); }
+.owner-column-head.academic-affairs { background: var(--blue-050); color: var(--maroon-900); }
 .owner-column-head.academic-divisions { background: var(--gold-050); color: var(--gold-900); }
 
 .owner-column-body { padding: var(--space-2) 0; }
@@ -454,7 +463,7 @@ main#view-root {
   border-bottom: 1px solid var(--bg-sunken);
 }
 .event-row:last-child { border-bottom: none; }
-.event-row:hover { background: var(--purple-050); }
+.event-row:hover { background: var(--blue-050); }
 
 .event-row .event-date-col {
   flex: none;
@@ -509,7 +518,7 @@ main#view-root {
   font-weight: 600;
 }
 .week-nav button.step:hover,
-.month-nav button.step:hover { background: var(--purple-050); }
+.month-nav button.step:hover { background: var(--blue-050); }
 .week-nav button.step:disabled,
 .month-nav button.step:disabled {
   opacity: 0.4;
@@ -527,7 +536,7 @@ main#view-root {
   border-radius: var(--radius-md);
   overflow: hidden;
 }
-.week-day.is-today { border-color: var(--gold-500); box-shadow: 0 0 0 2px var(--gold-100); }
+.week-day.is-today { border-color: var(--orange-500); box-shadow: 0 0 0 2px var(--orange-100); }
 .week-day-head {
   display: flex;
   align-items: baseline;
@@ -540,8 +549,8 @@ main#view-root {
 .week-day-head .today-flag {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  background: var(--gold-500);
-  color: var(--gold-900);
+  background: var(--orange-500);
+  color: var(--orange-900);
   padding: 1px 7px;
   border-radius: 999px;
 }
@@ -561,8 +570,8 @@ main#view-root {
   overflow: hidden;
 }
 .month-dow {
-  background: var(--purple-050);
-  color: var(--purple-900);
+  background: var(--blue-050);
+  color: var(--maroon-900);
   text-align: center;
   font-size: 0.7rem;
   font-weight: 700;
@@ -586,8 +595,8 @@ main#view-root {
   align-self: flex-start;
 }
 .month-cell.is-today .cell-date {
-  background: var(--gold-500);
-  color: var(--gold-900);
+  background: var(--orange-500);
+  color: var(--orange-900);
   border-radius: 50%;
   width: 22px; height: 22px;
   display: flex; align-items: center; justify-content: center;
@@ -608,7 +617,7 @@ main#view-root {
   text-align: left;
   color: var(--ink);
 }
-.month-pill:hover { background: var(--purple-100); }
+.month-pill:hover { background: var(--blue-100); }
 .month-pill .swatch { width: 8px; height: 8px; border-radius: 2px; flex: none; }
 .month-pill .label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex: 1; }
 .month-pill.is-holiday { background: var(--gold-500); color: var(--gold-900); font-weight: 700; }
@@ -652,7 +661,7 @@ main#view-root {
 .year-ribbon .term-block span { padding: 0 var(--space-2); }
 .year-ribbon .term-block.fall { background: var(--carmine-600); }
 .year-ribbon .term-block.intersession { background: var(--gold-500); color: var(--gold-900); }
-.year-ribbon .term-block.spring { background: var(--purple-700); }
+.year-ribbon .term-block.spring { background: var(--maroon-700); }
 .year-ribbon .term-block.summer { background: var(--magenta-600); }
 .year-ribbon .term-block.gap { background: var(--bg-sunken); color: var(--ink-faint); }
 
@@ -662,7 +671,7 @@ main#view-root {
   width: 0; height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 12px solid var(--purple-900);
+  border-top: 12px solid var(--orange-500);
   transform: translateX(-8px);
 }
 .year-ribbon .today-marker::after {
@@ -674,7 +683,7 @@ main#view-root {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   font-weight: 700;
-  color: var(--purple-900);
+  color: var(--orange-900);
   white-space: nowrap;
 }
 
@@ -711,8 +720,8 @@ main#view-root {
    ========================================================================== */
 
 .cycle-intro {
-  background: var(--purple-050);
-  border: 1px solid var(--purple-100);
+  background: var(--blue-050);
+  border: 1px solid var(--blue-100);
   border-radius: var(--radius-md);
   padding: var(--space-4);
   margin-bottom: var(--space-5);
@@ -738,7 +747,7 @@ main#view-root {
 }
 .cycle-column-head.fall { background: var(--carmine-600); }
 .cycle-column-head.intersession { background: var(--gold-500); color: var(--gold-900); }
-.cycle-column-head.spring { background: var(--purple-700); }
+.cycle-column-head.spring { background: var(--maroon-700); }
 .cycle-column-head.summer { background: var(--magenta-600); }
 
 .cycle-step {
@@ -750,7 +759,7 @@ main#view-root {
   width: 100%;
   text-align: left;
 }
-.cycle-step:hover { background: var(--purple-050); }
+.cycle-step:hover { background: var(--blue-050); }
 .cycle-step:last-child { border-bottom: none; }
 .cycle-step .step-week { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-faint); }
 .cycle-step .step-title { font-size: 0.87rem; font-weight: 600; margin-top: 2px; }
@@ -762,7 +771,7 @@ main#view-root {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(46, 12, 76, 0.45);
+  background: rgba(74, 14, 32, 0.45);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -799,7 +808,7 @@ main#view-root {
   color: var(--ink-soft);
   flex: none;
 }
-.modal-close:hover { background: var(--purple-100); }
+.modal-close:hover { background: var(--blue-100); }
 .modal-body { padding: var(--space-5); }
 
 .detail-grid {
@@ -829,7 +838,7 @@ main#view-root {
   max-width: 48%;
   text-align: left;
 }
-.detail-nav button:hover { background: var(--purple-050); }
+.detail-nav button:hover { background: var(--blue-050); }
 .detail-nav button:disabled { opacity: 0.4; cursor: default; }
 .detail-nav button small { display: block; color: var(--ink-faint); font-weight: 600; text-transform: uppercase; font-size: 0.65rem; }
 
@@ -847,8 +856,8 @@ main#view-root {
   display: block;
   width: 28px; height: 28px;
   margin: var(--space-3) auto 0;
-  border: 3px solid var(--purple-100);
-  border-top-color: var(--purple-700);
+  border: 3px solid var(--blue-100);
+  border-top-color: var(--maroon-700);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
