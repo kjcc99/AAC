@@ -41,11 +41,7 @@
       "end": "2026-08-14",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -56,11 +52,7 @@
       "end": "2026-08-17",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "narrative": "Fall semester Aug 17 - Dec 5",
       "businessDayBlocking": false
@@ -72,11 +64,7 @@
       "end": "2026-08-31",
       "owner": "academic-calendar",
       "category": "registration",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -87,12 +75,141 @@
       "end": "2026-09-07",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
+    },
+    {
+      "id": "ss-clubchella-2026",
+      "title": "\"Clubchella\" Club Rush",
+      "start": "2026-09-01",
+      "end": "2026-09-02",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "11:00 AM – 3:00 PM · Library Plaza"
+    },
+    {
+      "id": "ss-study-jam-2026-09-01",
+      "title": "Study Jam Returns with Extended Learning Center Hours",
+      "start": "2026-09-01",
+      "end": "2026-09-01",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "5:00 PM – 9:00 PM · Learning Center (Sage Hall)"
+    },
+    {
+      "id": "ss-parenting-students-event-2026",
+      "title": "EOPS, NextUp, CalWORKs & Basic Needs – Parenting Students Event",
+      "start": "2026-09-03",
+      "end": "2026-09-03",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "1:00 PM – 3:00 PM · Library Plaza"
+    },
+    {
+      "id": "ss-icc-meeting-2026-09-03",
+      "title": "ICC Meeting",
+      "start": "2026-09-03",
+      "end": "2026-09-03",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["student-services"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "2:30 PM – 4:30 PM · Student Lounge (SCT)"
+    },
+    {
+      "id": "ss-aso-meeting-2026-09-04",
+      "title": "ASO Meeting",
+      "start": "2026-09-04",
+      "end": "2026-09-04",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["student-services"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "9:00 AM – 11:00 AM · Cedar Hall 139A (Board Room)"
+    },
+    {
+      "id": "ss-puente-orientation-2026",
+      "title": "Puente Orientation",
+      "start": "2026-09-10",
+      "end": "2026-09-10",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "10:00 AM – 11:00 AM · Location TBD"
+    },
+    {
+      "id": "ss-produce-pickup-2026-09-10",
+      "title": "Basic Needs: Produce Pick-Up",
+      "start": "2026-09-10",
+      "end": "2026-09-10",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "10:00 AM – 11:30 AM · T100"
+    },
+    {
+      "id": "ss-eops-financial-aid-2026",
+      "title": "EOPS – Understanding Your Financial Aid",
+      "start": "2026-09-10",
+      "end": "2026-09-10",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "10:00 AM – 12:00 PM · Location TBD"
+    },
+    {
+      "id": "ss-patriot-day-ceremony-2026",
+      "title": "Patriot Day Ceremony",
+      "start": "2026-09-11",
+      "end": "2026-09-11",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "8:30 AM – 9:30 AM · Administration Building Flagpole"
+    },
+    {
+      "id": "ss-patriot-day-vigil-2026",
+      "title": "Patriot Day Candlelight Vigil",
+      "start": "2026-09-11",
+      "end": "2026-09-11",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "6:00 PM – 7:00 PM · Administration Building Flagpole"
+    },
+    {
+      "id": "ss-bot-meeting-2026-09-14",
+      "title": "Board of Trustees Meeting",
+      "start": "2026-09-14",
+      "end": "2026-09-14",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "5:30 PM – 8:00 PM · Cedar Hall"
     },
     {
       "id": "voter-reg-day-2026",
@@ -101,12 +218,82 @@
       "end": "2026-09-15",
       "owner": "academic-calendar",
       "category": "other",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": false
+    },
+    {
+      "id": "ss-eops-nextup-meet-greet-2026",
+      "title": "EOPS/NextUp – Meet & Greet",
+      "start": "2026-09-15",
+      "end": "2026-09-15",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "11:30 AM – 1:30 PM · Location TBD"
+    },
+    {
+      "id": "ss-womens-empowerment-2026",
+      "title": "Basic Needs: Self-Care & Success – A Women's Empowerment Event",
+      "start": "2026-09-16",
+      "end": "2026-09-16",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "9:30 AM – 11:30 AM · SSV – Student Services Building (Back Doorway Patio)"
+    },
+    {
+      "id": "ss-breakfast-eops-nextup-2026",
+      "title": "Breakfast with EOPS/NextUp Department",
+      "start": "2026-09-17",
+      "end": "2026-09-17",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "9:00 AM – 11:00 AM · Location TBD"
+    },
+    {
+      "id": "ss-undocu-liaison-training-2026",
+      "title": "UndocuLiaison Training",
+      "start": "2026-09-17",
+      "end": "2026-09-18",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["student-services"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "All day · Northern California (location TBD)",
+      "notes": "Location corrected from \"Northen California\" as listed in the source flyer."
+    },
+    {
+      "id": "ss-icc-meeting-2026-09-17",
+      "title": "ICC Meeting",
+      "start": "2026-09-17",
+      "end": "2026-09-17",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["student-services"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "2:30 PM – 4:30 PM · Student Lounge (SCT)"
+    },
+    {
+      "id": "ss-aso-meeting-2026-09-18",
+      "title": "ASO Meeting",
+      "start": "2026-09-18",
+      "end": "2026-09-18",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["student-services"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "9:00 AM – 11:00 AM · Cedar Hall 139A (Board Room)"
     },
     {
       "id": "indigenous-peoples-day-2026",
@@ -115,12 +302,81 @@
       "end": "2026-10-12",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
+    },
+    {
+      "id": "ss-calworks-lunch-learn-2026-09-21",
+      "title": "CalWORKs: Lunch and Learn Series (CalWORKs Only)",
+      "start": "2026-09-21",
+      "end": "2026-09-23",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "12:00 PM – 1:30 PM · Student Lounge (CalWORKs students only)"
+    },
+    {
+      "id": "ss-marauder-promise-finances-2026",
+      "title": "Marauder Promise: Taking Control of Your Finances Workshop",
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "11:00 AM – 12:00 PM · SSV 236"
+    },
+    {
+      "id": "ss-produce-pickup-2026-09-24",
+      "title": "Basic Needs: Produce Pick-Up",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "10:00 AM – 11:30 AM · T100"
+    },
+    {
+      "id": "ss-eops-awareness-2026",
+      "title": "EOPS Awareness Event",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "1:00 PM – 3:00 PM · Library Plaza"
+    },
+    {
+      "id": "ss-calworks-lunch-learn-2026-09-25",
+      "title": "CalWORKs: Lunch and Learn Series (CalWORKs Only)",
+      "start": "2026-09-25",
+      "end": "2026-09-25",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "9:00 AM – 11:00 AM · CalWORKs Lab (CalWORKs students only)"
+    },
+    {
+      "id": "ss-womens-equality-day-2026",
+      "title": "Women's Equality Day",
+      "start": "2026-09-25",
+      "end": "2026-09-25",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "2:00 PM – 3:00 PM · Student Lounge (SCT)"
     },
     {
       "id": "voter-reg-deadline-2026",
@@ -129,12 +385,33 @@
       "end": "2026-10-18",
       "owner": "academic-calendar",
       "category": "other",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": false
+    },
+    {
+      "id": "ss-marauder-promise-credit-2026",
+      "title": "Marauder Promise: Understanding Credit Workshop",
+      "start": "2026-09-30",
+      "end": "2026-09-30",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "3:00 PM – 4:00 PM · Virtual"
+    },
+    {
+      "id": "ss-study-jam-2026-09-30",
+      "title": "Study Jam Returns with Extended Learning Center Hours",
+      "start": "2026-09-30",
+      "end": "2026-09-30",
+      "owner": "student-services",
+      "category": "other",
+      "audience": ["general-campus"],
+      "source": "academic-calendar",
+      "businessDayBlocking": false,
+      "description": "5:00 PM – 9:00 PM · Learning Center (Sage Hall)"
     },
     {
       "id": "early-voting-2026",
@@ -143,10 +420,7 @@
       "end": "2026-10-23",
       "owner": "academic-calendar",
       "category": "other",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -157,10 +431,7 @@
       "end": "2026-11-03",
       "owner": "academic-calendar",
       "category": "other",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -171,10 +442,7 @@
       "end": "2026-11-11",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -185,10 +453,7 @@
       "end": "2026-11-26",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -199,10 +464,7 @@
       "end": "2026-11-28",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -213,11 +475,7 @@
       "end": "2026-12-05",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -228,10 +486,7 @@
       "end": "2026-12-25",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -242,10 +497,7 @@
       "end": "2026-12-31",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -256,10 +508,7 @@
       "end": "2027-01-01",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -270,11 +519,7 @@
       "end": "2027-01-04",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -285,10 +530,7 @@
       "end": "2027-01-18",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -299,11 +541,7 @@
       "end": "2027-02-06",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -314,11 +552,7 @@
       "end": "2027-02-05",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -329,11 +563,7 @@
       "end": "2027-02-08",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -344,10 +574,7 @@
       "end": "2027-02-12",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -358,10 +585,7 @@
       "end": "2027-02-13",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -372,10 +596,7 @@
       "end": "2027-02-15",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -386,11 +607,7 @@
       "end": "2027-02-22",
       "owner": "academic-calendar",
       "category": "registration",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -401,10 +618,7 @@
       "end": "2027-03-31",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -415,10 +629,7 @@
       "end": "2027-04-10",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -429,10 +640,7 @@
       "end": "2027-05-31",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -443,11 +651,7 @@
       "end": "2027-06-04",
       "owner": "academic-calendar",
       "category": "other",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -458,11 +662,7 @@
       "end": "2027-06-05",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -473,11 +673,7 @@
       "end": "2027-06-14",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     },
@@ -488,10 +684,7 @@
       "end": "2027-06-18",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -502,10 +695,7 @@
       "end": "2027-06-19",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true
     },
@@ -516,10 +706,7 @@
       "end": "2027-07-05",
       "owner": "academic-calendar",
       "category": "holiday",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions"
-      ],
+      "audience": ["academic-affairs", "academic-divisions"],
       "source": "academic-calendar",
       "businessDayBlocking": true,
       "notes": "Observed date per official calendar."
@@ -531,11 +718,7 @@
       "end": "2027-08-07",
       "owner": "academic-calendar",
       "category": "term",
-      "audience": [
-        "academic-affairs",
-        "academic-divisions",
-        "student-services"
-      ],
+      "audience": ["academic-affairs", "academic-divisions", "student-services"],
       "source": "academic-calendar",
       "businessDayBlocking": false
     }
