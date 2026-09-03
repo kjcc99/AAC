@@ -46,6 +46,12 @@
   --gold-100: #FBEBC4;
   --gold-050: #FDF5E0;
 
+  /* --- Portimao Blue family (Student Services) --- */
+  --portimao-800: #0F3D66;
+  --portimao-600: #1C67B0;
+  --portimao-100: #D8E9F6;
+  --portimao-050: #EEF6FB;
+
   /* --- Magenta Gem family (highlights / today) --- */
   --magenta-800: #8A0E44;
   --magenta-600: #C21463;
@@ -345,6 +351,7 @@ main#view-root {
 .chip--owner-academic-calendar { background: var(--carmine-050); color: var(--carmine-800); border-color: var(--carmine-100); }
 .chip--owner-academic-affairs { background: var(--blue-050); color: var(--maroon-900); border-color: var(--blue-100); }
 .chip--owner-academic-divisions { background: var(--gold-050); color: var(--gold-900); border-color: var(--gold-100); }
+.chip--owner-student-services { background: var(--portimao-050); color: var(--portimao-800); border-color: var(--portimao-100); }
 .chip--holiday { background: var(--gold-500); color: var(--gold-900); border-color: var(--gold-700); font-weight: 700; }
 
 .week-badge {
@@ -442,6 +449,7 @@ main#view-root {
 .owner-column-head.academic-calendar { background: var(--carmine-050); color: var(--carmine-800); }
 .owner-column-head.academic-affairs { background: var(--blue-050); color: var(--maroon-900); }
 .owner-column-head.academic-divisions { background: var(--gold-050); color: var(--gold-900); }
+.owner-column-head.student-services { background: var(--portimao-050); color: var(--portimao-800); }
 
 .owner-column-body { padding: var(--space-2) 0; }
 .owner-column-empty { padding: var(--space-4); color: var(--ink-faint); font-size: 0.85rem; font-style: italic; }
