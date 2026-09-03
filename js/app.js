@@ -64,6 +64,9 @@
     if (owner === 'academic-divisions') {
       return `<svg ${common}><polygon points="8,1.5 14.5,13.5 1.5,13.5" fill="currentColor"/></svg>`;
     }
+    if (owner === 'student-services') {
+      return `<svg ${common}><polygon points="8,1 14,4.5 14,11.5 8,15 2,11.5 2,4.5" fill="currentColor"/></svg>`;
+    }
     return `<svg ${common}><rect x="2" y="2" width="12" height="12" fill="currentColor"/></svg>`;
   }
 
@@ -527,7 +530,7 @@
         <span class="subtitle">Today's items, plus the rest of this week</span>
       </div>
       <div class="today-columns">
-        ${['academic-calendar', 'academic-affairs', 'academic-divisions'].map(owner => ownerColumn(owner, todaysEvents, weekEvents)).join('')}
+        ${['academic-calendar', 'academic-affairs', 'academic-divisions', 'student-services'].map(owner => ownerColumn(owner, todaysEvents, weekEvents)).join('')}
       </div>
     `;
     bindEventRowClicks(events);
@@ -818,6 +821,7 @@
           <span class="legend-item"><span class="swatch" style="background:var(--carmine-600)"></span>Academic Calendar</span>
           <span class="legend-item"><span class="swatch" style="background:var(--purple-700)"></span>Academic Affairs</span>
           <span class="legend-item"><span class="swatch" style="background:var(--gold-500)"></span>Academic Divisions</span>
+          <span class="legend-item"><span class="swatch" style="background:var(--portimao-600)"></span>Student Services</span>
           <span class="legend-item"><span class="holiday-star" style="color:var(--gold-500)">${holidayIcon(13)}</span>Holiday</span>
         </div>
       </div>
@@ -1009,6 +1013,7 @@
     if (owner === 'academic-calendar') return 'var(--carmine-600)';
     if (owner === 'academic-affairs') return 'var(--purple-700)';
     if (owner === 'academic-divisions') return 'var(--gold-500)';
+    if (owner === 'student-services') return 'var(--portimao-600)';
     return 'var(--ink-faint)';
   }
 
