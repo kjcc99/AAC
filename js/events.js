@@ -10,7 +10,8 @@ const AAEvents = (function () {
   const OWNER_LABELS = {
     'academic-calendar': 'Academic Calendar',
     'academic-affairs': 'Academic Affairs',
-    'academic-divisions': 'Academic Divisions'
+    'academic-divisions': 'Academic Divisions',
+    'student-services': 'Student Services'
   };
 
   const CATEGORY_LABELS = {
